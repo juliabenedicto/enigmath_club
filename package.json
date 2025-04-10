@@ -1,6 +1,7 @@
 {
   "name": "enigmath-club",
   "version": "1.0.0",
+ "type": "module",
   "description": "Landing del projecte EnigMath Club per a reptes familiars de matemàtiques.",
   "scripts": {
     "dev": "vite",
@@ -13,6 +14,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.3",
     "vite": "^5.0.0"
   }
 }
