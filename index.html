@@ -1,94 +1,93 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Desafío Bmath: El mapa roto de Ramón</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EnigMath Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { padding-top: 2rem; background-color: #f5f9ff; }
-    .countdown { font-size: 1.5rem; font-weight: bold; color: #d63384; }
-    .ranking-nick { font-weight: bold; }
+    body { background-color: #f8f9fa; }
+    .countdown { font-size: 1.25rem; font-weight: 500; color: #6c757d; }
+    .section { background: white; padding: 2rem; border-radius: 0.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
   </style>
 </head>
 <body>
-<div class="container">
-  <header class="mb-5 text-center">
-    <h1 class="display-5">🔍 Desafío Bmath: El mapa roto de Ramón</h1>
-    <p class="lead">¡Resuelve el enigma junto a tu familia y suma puntos para convertirte en una leyenda de las mates!</p>
+
+  <header class="bg-white border-bottom py-3 text-center">
+    <img src="logo_bmath.png" alt="Bmath logo" height="50">
+    <p class="countdown mt-2" id="countdown">El proper repte es desbloqueja en: ...</p>
   </header>
 
-  <section class="mb-4">
-    <h2>🧩 El reto</h2>
-    <p>Ramón ha encontrado un mapa muy antiguo... ¡pero está incompleto! Solo hay algunos números y flechas que indican movimientos. ¿Podéis ayudarle a descubrir a dónde lleva?</p>
-    <img src="https://via.placeholder.com/600x300?text=Imagen+del+mapa+roto" alt="Mapa roto" class="img-fluid rounded">
-  </section>
+  <main class="container py-5">
+    <h1 class="text-center text-primary mb-4">EnigMath Club</h1>
+    <p class="lead text-center text-secondary">Reptes matemàtics per aprendre a casa</p>
+    <p class="text-center fst-italic text-muted mb-5">Motiva’t, diverteix-te i estima les matemàtiques</p>
 
-  <section class="mb-4">
-    <h2>📤 Envía tu respuesta</h2>
-    <form action="https://formspree.io/f/{tu-form-id}" method="POST" class="row g-3">
-      <div class="col-md-4">
-        <input type="text" class="form-control" name="nickname" placeholder="Nickname del alumno/a" required>
+    <div class="section">
+      <h2 class="h4 text-primary mb-3">🗺️ Repte: El mapa trencat d’en Ramon</h2>
+      <p>Ramon ha trobat un mapa antic amb camins marcats per arribar al castell... però només pot avançar cap a la dreta ➡️ i cap avall ⬇️. Sortint de casa seva, a la cantonada superior esquerra d'una graella 4x4, quants camins diferents pot fer per arribar al castell, que és a la cantonada inferior dreta?</p>
+      <p><strong>Pista:</strong> No pot tornar enrere ni anar cap a l'esquerra o cap amunt. Només pot fer moviments cap a la dreta o cap avall!</p>
+
+      <img src="https://via.placeholder.com/600x300?text=Mapa+trencat+4x4" alt="Mapa trencat" class="img-fluid rounded my-3">
+
+      <div class="text-center mt-4">
+        <a href="https://typeform.com/to/exemple-formulari" target="_blank" class="btn btn-primary btn-lg">📩 Envia la teva resposta</a>
       </div>
-      <div class="col-md-4">
-        <input type="text" class="form-control" name="curso" placeholder="Curso (por ejemplo: 4º)" required>
-      </div>
-      <div class="col-md-4">
-        <input type="email" class="form-control" name="email" placeholder="Email del adulto responsable" required>
-      </div>
-      <div class="col-12">
-        <textarea class="form-control" name="respuesta" rows="3" placeholder="Escribe aquí vuestra respuesta al reto" required></textarea>
-      </div>
-      <div class="col-12 text-center">
-        <button type="submit" class="btn btn-primary btn-lg">Enviar respuesta</button>
-      </div>
-    </form>
-  </section>
+    </div>
 
-  <section class="mb-4 text-center">
-    <div class="countdown" id="countdown">⏳ Cargando cuenta atrás...</div>
-  </section>
+    <div class="section mt-5">
+      <h3 class="h5">📊 Rànquing de la setmana</h3>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between"><span><strong>SumadorsValls</strong> (Valls)</span> <span>20 pts</span></li>
+        <li class="list-group-item d-flex justify-content-between"><span><strong>FamíliaXifres</strong> (Manresa)</span> <span>18 pts</span></li>
+        <li class="list-group-item d-flex justify-content-between"><span><strong>CalculadorsBCN</strong> (Barcelona)</span> <span>17 pts</span></li>
+        <!-- més nicks aquí -->
+      </ul>
+    </div>
 
-  <section class="mb-4">
-    <h2>🏆 Ranking semanal</h2>
-    <ul class="list-group">
-      <li class="list-group-item d-flex justify-content-between"><span class="ranking-nick">MateFamily1 (Sant Cugat)</span> <span>24 pts</span></li>
-      <li class="list-group-item d-flex justify-content-between"><span class="ranking-nick">EquipoMatesPower (Terrassa)</span> <span>22 pts</span></li>
-      <li class="list-group-item d-flex justify-content-between"><span class="ranking-nick">Sumonautas (Valencia)</span> <span>21 pts</span></li>
-      <!-- más entradas -->
-    </ul>
-  </section>
+    <div class="section mt-4 text-center">
+      <a href="https://api.whatsapp.com/send?text=Descobreix+el+repte+matem%C3%A0tic+familiar+de+la+setmana+amb+EnigMath+Club!+https://retobmath.netlify.app" class="btn btn-success">📣 Comparteix aquest repte</a>
+    </div>
 
-  <section class="mb-4 text-center">
-    <a href="https://api.whatsapp.com/send?text=¡Participa+en+el+Desafío+Bmath!+Sigue+este+link:+https://retobmath.netlify.app" class="btn btn-success btn-lg">📣 Comparte este reto con alguien</a>
-  </section>
+    <div class="section mt-5">
+      <h3 class="h5">👩‍🏫 Per a adults</h3>
+      <p><strong>Què treballem amb aquest repte?</strong> Estem desenvolupant la lògica i el pensament estratègic, així com la comprensió de patrons i la combinatòria bàsica.</p>
+      <p><strong>Consell pedagògic:</strong> Quan el vostre fill o filla dubta, està aprenent! Feu preguntes obertes com “Què passaria si...?” o “Com ho veus tu?” per fomentar el raonament.</p>
+    </div>
+  </main>
 
-  <hr>
+  <footer class="text-center text-muted py-4 small">
+    © 2025 Bmath - Innovamat Education, S.L.
+  </footer>
 
-  <section class="mb-4">
-    <h2>👨‍👩‍👧‍👦 Para los adultos</h2>
-    <p><strong>¿Qué estamos trabajando esta semana?</strong> Este reto pone a prueba la capacidad para interpretar códigos, orientarse en el espacio y seguir instrucciones. Es la base del pensamiento lógico y de la resolución de problemas.</p>
-    <p><strong>Tip pedagógico:</strong> ¿Sabías que cuando tu hijo duda está aprendiendo más que cuando acierta a la primera? Ayúdale preguntando cosas como “¿y si lo miramos de otra forma?” en vez de dar la solución.</p>
-  </section>
-</div>
+  <script>
+    function getNextFriday17h() {
+      const now = new Date();
+      const result = new Date();
+      const day = now.getDay();
+      const daysUntilFriday = (5 - day + 7) % 7;
+      result.setDate(now.getDate() + daysUntilFriday);
+      result.setHours(17, 0, 0, 0);
+      if (result < now) result.setDate(result.getDate() + 7);
+      return result;
+    }
 
-<script>
-  const countdownEl = document.getElementById("countdown");
-  const nextFriday = new Date();
-  nextFriday.setDate(nextFriday.getDate() + ((12 - nextFriday.getDay()) % 7)); // próximo viernes
-  nextFriday.setHours(9, 0, 0, 0);
+    function updateCountdown() {
+      const countdown = document.getElementById('countdown');
+      const target = getNextFriday17h();
+      const now = new Date();
+      const diff = target - now;
 
-  function updateCountdown() {
-    const now = new Date();
-    const diff = nextFriday - now;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / 1000 / 60) % 60);
-    countdownEl.innerText = `⏳ Faltan ${days} días, ${hours}h y ${minutes}min para el próximo reto.`;
-  }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
 
-  updateCountdown();
-  setInterval(updateCountdown, 60000);
-</script>
+      countdown.textContent = `El proper repte es desbloqueja en: ${days}d ${hours}h ${minutes}min ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 </body>
 </html>
